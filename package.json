@@ -10,13 +10,6 @@
   ],
   "scripts": {
     "lint": "eslint src",
-    "test:build:app": "webpack --config ./test/env/webpack.config.js --mode=development",
-    "test:build:iframe": "CERAMIC_API=http://localhost:7777 webpack --config webpack.config.js --mode=development --output-path ./test/env/build --output-filename iframe.js",
-    "test:ceramic": "rm -rf ./test/data && ceramic daemon --port 7777 --pinset-directory ./test/data --network inmemory",
-    "test:server": "http-server -c-1 -p 30001 ./test/env/",
-    "test:app": "run-p test:build:** test:ceramic test:server",
-    "test:run": "jest",
-    "test": "run-p test:build:** && npm run test:run",
     "build:prod:es5": "rimraf ./lib && babel src --out-dir lib --extensions .ts",
     "build:prod:types": "rimraf ./types && tsc --emitDeclarationOnly --skipLibCheck",
     "build:prod:dist": "webpack --config webpack.config.js --mode=production --output-filename index.js",
