@@ -1,5 +1,5 @@
 {
-  "name": "@the-coin/3id-connect",
+  "name": "@thecointech/3id-connect",
   "version": "1.0.0",
   "description": "Account management for 3ID",
   "main": "lib/index.js",
